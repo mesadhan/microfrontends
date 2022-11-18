@@ -2,8 +2,6 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 require('dotenv').config()
 
-console.log('Load Environments: ', `${process.env.NAV_PUBLIC_URL}`);
-
 
 const splitUrlParts = (url) => {
   const urlParts = new URL(url);
@@ -14,15 +12,15 @@ const splitUrlParts = (url) => {
   }
 }
 
-const APP_PORT = splitUrlParts(`${process.env.nav_public_url}`).port;
+const APP_PORT = splitUrlParts(`${process.env.main_public_url}`).port;
 
-console.log('Load environment', splitUrlParts(`${process.env.nav_public_url}`));
+console.log('Load environment', splitUrlParts(`${process.env.main_public_url}`));
 
 
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
-    publicPath: `${process.env.nav_public_url}/`,
+    publicPath: `${process.env.main_public_url}/`,
   },
 
   resolve: {
@@ -64,7 +62,7 @@ module.exports = {
       filename: "remoteEntry.js",
       remotes: {
         common: `common@${process.env.common_public_url}/remoteEntry.js`,
-        nav: `nav@${process.env.nav_public_url}/remoteEntry.js`,
+        nav: `nav@${process.env.main_public_url}/remoteEntry.js`,
         cart: `cart@${process.env.cart_public_url}/remoteEntry.js`,
       },
       exposes: {
