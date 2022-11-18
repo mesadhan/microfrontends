@@ -16,7 +16,7 @@ const ViewingStatistics = () => {
     }
 
     // return <div class="min-w-screen min-h-screen bg-gray-100 flex items-center justify-center bg-gray-100 font-sans py-6">
-    return <div className="min-w-screen min-h-screen flex justify-center bg-gray-100 font-sans py-6">
+    return <div className="min-w-screen flex justify-center bg-gray-100 font-sans py-6">
         <div className="container">
         
             <div className="w-full py-3">

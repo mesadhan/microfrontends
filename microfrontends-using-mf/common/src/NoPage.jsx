@@ -1,15 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
 
 export default () => {
   
   return (
     <header className="bg-orange-700 text-white font-bold text-3xl p-5 flex">
-
-      <img style={{'height': '35px'}} src="https://www.takeaway.com/campaign/takeawayout/img/logo.png" alt="logo"></img>
-
-      <Link to="/" className="flex-grow"> Cocktail </Link>
+      <a href="/" className="flex-grow"> Coacktail </a>
       <div>
 
         {/* <button

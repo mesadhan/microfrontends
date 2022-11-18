@@ -13,8 +13,9 @@ import "./index.scss";
 
 import StatisticsProvider from "./StatisticsProvider";
 import Home from "./pages/Home";
-import Layout from "./pages/Layout";
+import Layout from "./Layout";
 import ViewingStatistics from "./pages/ViewingStatistics";
+import NoPage from "./NoPage";
 
 
 const App = () => {
@@ -28,8 +29,11 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
+              <Route exact path="/statistics" element={<ViewingStatistics />} />
             </Route>
-            <Route exact path="/statistics" element={<ViewingStatistics />} />
+            
+            <Route path="*" element={<NoPage />} />
+
           </Routes>
         </StatisticsProvider>
     
