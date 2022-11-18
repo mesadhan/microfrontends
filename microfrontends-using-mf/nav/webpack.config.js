@@ -65,6 +65,7 @@ module.exports = {
       remotes: {
         common: `common@${process.env.common_public_url}/remoteEntry.js`,
         nav: `nav@${process.env.nav_public_url}/remoteEntry.js`,
+        cart: `cart@${process.env.cart_public_url}/remoteEntry.js`,
       },
       exposes: {
         

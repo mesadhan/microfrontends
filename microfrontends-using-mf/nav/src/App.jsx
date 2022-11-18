@@ -4,9 +4,11 @@ import {createRoot} from 'react-dom/client';
 import "./index.scss";
 
 import useStore from "common/useStore";
+import useCartStore from "cart/useCartStore";
 
 const App = () => {
-  const {count, increment} = useStore();
+  // const {count, increment} = useStore();
+  const {count, increment} = useCartStore();
 
   return (
 
