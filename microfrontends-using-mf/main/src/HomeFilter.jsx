@@ -4,12 +4,11 @@ import { Link } from "react-router-dom";
 
 import useProductStore from 'common/useProductStore';
 import useCartStore from 'cart/useCartStore';
-import Header from "common/Header";
 
 
 export default function HomeFilter() {
 
-    const {count, toggleCartPanel} = useCartStore();
+    const {count, toggleCartPanel, addToCartIfNotInCart} = useCartStore();
     const { products, getFilteredList } = useProductStore();
 
     const [formData, setFormData] = useState({
@@ -73,8 +72,6 @@ export default function HomeFilter() {
 
 
         <>
-
-            <Header/>
 
 
             <div className="flex justify-center">

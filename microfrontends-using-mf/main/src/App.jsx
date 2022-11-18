@@ -2,6 +2,8 @@ import React from "react";
 import {createRoot} from 'react-dom/client';
 import HomeFilter from "./HomeFilter";
 import NoPage from "common/NoPage";
+import Details from "./Details";
+
 
 import "./index.scss";
 
@@ -12,6 +14,7 @@ import {
   Link,
   useParams
 } from "react-router-dom";
+import Layout from "./Layout";
 
 const App = () => {
 
@@ -22,10 +25,11 @@ const App = () => {
 
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomeFilter />}>
-          {/* <Route exact path="/:id" element={<DetailsPage />} /> */}
-          <Route path="*" element={<NoPage />} />
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<HomeFilter />} />
+          <Route exact path="/:id" element={<Details />} />
         </Route>
+        <Route path="*" element={<NoPage />} />
       </Routes>
 
     </BrowserRouter>
