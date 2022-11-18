@@ -67,6 +67,11 @@ module.exports = {
       exposes: {
         "./useStore": "./src/useStore",
         "./Product": "./src/Product",
+        "./Header": "./src/Header",
+        "./Footer": "./src/Footer",
+        "./StatisticsProvider": "./src/StatisticsProvider",
+        "./store/useViewingStatisticsStore": "./src/store/useViewingStatisticsStore",
+        "./store/useProductStore": "./src/store/useProductStore",
       },
       shared: {
         ...deps,
