@@ -67,6 +67,7 @@ module.exports = {
       },
       exposes: {
         "./useCartStore": "./src/useCartStore",
+        "./CartSidePanel": "./src/CartSidePanel",
       },
       shared: {
         ...deps,
