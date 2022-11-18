@@ -1,9 +1,14 @@
 import React, { useEffect } from "react";
+import {
+    useLocation
+  } from "react-router-dom";
 
 
-import useViewingStatisticsStore from "./useViewingStatisticsStore";
+import useViewingStatisticsStore from "./stores/useViewingStatisticsStore";
 
-export default function Logger({ children }) {
+export default function StatisticsProvider({ children }) {
+ 
+    let location = useLocation();
 
     const { userId, createUserIdentity, setUserPageStatistic } = useViewingStatisticsStore();
 
@@ -12,7 +17,7 @@ export default function Logger({ children }) {
             await setUserPageStatistic(window.location.href);
             await createUserIdentity();
         })()
-    }, []);
+    }, [location]);
 
     // console.log("Hello from React and Module Federation");
 

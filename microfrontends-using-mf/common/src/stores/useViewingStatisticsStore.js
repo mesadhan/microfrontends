@@ -5,17 +5,18 @@ const useViewingStatisticsStore = create(persist(
 
     (set, get) => ({
         userId: null,
-        visitedPagesStatistic: [],
+        visitedPagesStatistics: [],
         setUserPageStatistic: (url) => {
-            const { visitedPagesStatistic } = get();
+            const { visitedPagesStatistics } = get();
             const pageInfo = {
                 url,
                 counter: 1,
                 created_at: new Date(),
+                updated_at: new Date(),
             }
-            const isPageVisited = visitedPagesStatistic.find(page => page.url === url);
+            const isPageVisited = visitedPagesStatistics.find(page => page.url === url);
             if (isPageVisited) {
-                const newVisitedPagesStatistic = visitedPagesStatistic.map(page => {
+                const newVisitedPagesStatistics = visitedPagesStatistics.map(page => {
                     if (page.url === url) {
                         return {
                             ...page,
@@ -25,9 +26,9 @@ const useViewingStatisticsStore = create(persist(
                     }
                     return page;
                 })
-                return set({ visitedPagesStatistic: newVisitedPagesStatistic });
+                return set({ visitedPagesStatistics: newVisitedPagesStatistics });
             } else {
-                return set({ visitedPagesStatistic: [...visitedPagesStatistic, pageInfo] });
+                return set({ visitedPagesStatistics: [...visitedPagesStatistics, pageInfo] });
             }
         },
         createUserIdentity: async () => {
