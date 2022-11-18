@@ -69,6 +69,8 @@ module.exports = {
         "./Header": "./src/Header",
         "./Footer": "./src/Footer",
         "./NoPage": "./src/NoPage",
+        "./StatisticsProvider": "./src/StatisticsProvider",
+        "./ViewingStatistics": "./src/pages/ViewingStatistics",
         "./useProductStore": "./src/stores/useProductStore",
       },
       shared: {
