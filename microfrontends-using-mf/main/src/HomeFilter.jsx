@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 
 import useProductStore from 'common/useProductStore';
-import useCartStore from 'cart/useCartStore';
+import useCartStore from 'common/useCartStore';
 
 
 export default function HomeFilter() {

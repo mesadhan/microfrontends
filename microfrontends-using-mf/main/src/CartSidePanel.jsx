@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import useCartStore from "./useCartStore";
+import useCartStore from "common/useCartStore";
 
 
 export default function CartSidePanel() {

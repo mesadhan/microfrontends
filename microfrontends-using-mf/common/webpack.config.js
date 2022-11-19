@@ -62,7 +62,6 @@ module.exports = {
       filename: "remoteEntry.js",
       remotes: {
         common: `common@${process.env.common_public_url}/remoteEntry.js`,
-        cart: `cart@${process.env.cart_public_url}/remoteEntry.js`,
       },
       exposes: {
         "./useStore": "./src/useStore",
@@ -72,6 +71,7 @@ module.exports = {
         "./StatisticsProvider": "./src/StatisticsProvider",
         "./ViewingStatistics": "./src/pages/ViewingStatistics",
         "./useProductStore": "./src/stores/useProductStore",
+        "./useCartStore": "./src/stores/useCartStore",
       },
       shared: {
         ...deps,
