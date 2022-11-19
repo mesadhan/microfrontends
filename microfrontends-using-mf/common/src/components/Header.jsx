@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import useCartStore from "../stores/useCartStore";
+import useViewingStatisticsStore from "../stores/useViewingStatisticsStore";
 
 export default () => {
   
   const {cart, isShowCartPanel, toggleCartPanel} = useCartStore();
+  const {userId} = useViewingStatisticsStore();
 
   return (
 
@@ -14,7 +16,7 @@ export default () => {
 
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
           <div className="container-fluid">
-            <Link to="/" className="navbar-brand" href="src/pages/Header">
+            <Link to="/" className="navbar-brand" href="src/components/Header">
               <img style={{'height': '35px'}} src="https://thecocktaildb.com/images/cocktail_left.png" alt="logo"></img> 
               Cocktail Shop
             </Link>
@@ -31,8 +33,12 @@ export default () => {
                   <Link to="/statistics" className="nav-link text-white"> Statistic </Link>
                 </li>
               </ul>
+
+              <div className="nav-item mt-1">
+                <span className="nav-link text-white"> UserId: {userId} 	&nbsp;	&nbsp;</span>
+              </div>
               <form className="d-flex">
-                
+
                 
 
                 <button onClick={toggleCartPanel} className="btn btn-outline-primary" type="button"> 

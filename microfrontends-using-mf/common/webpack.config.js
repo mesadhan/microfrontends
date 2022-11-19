@@ -64,8 +64,9 @@ module.exports = {
         common: `common@${process.env.common_public_url}/remoteEntry.js`,
       },
       exposes: {
-        "./Header": "./src/pages/Header",
-        "./Footer": "./src/pages/Footer",
+        "./Header": "./src/components/Header",
+        "./Footer": "./src/components/Footer",
+
         "./NoPage": "./src/pages/NoPage",
 
         "./useProductStore": "./src/stores/useProductStore",
