@@ -4,7 +4,7 @@ import { persist } from 'zustand/middleware'
 const useCartStore = create(persist(
   (set) => ({
     cart: [],
-    isShowCartPanel: true,
+    isShowCartPanel: false,
     toggleCartPanel: () => set((state) => ({ isShowCartPanel: !state.isShowCartPanel })),
     setCartPanelVisibility: (value) => set((state) => ({ isShowCartPanel: value })),
     addToCartIfNotInCart: (product) => {
