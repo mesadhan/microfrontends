@@ -24,6 +24,9 @@ const useCartStore = create(persist(
         return { cart };
       });
     },
+    removeFromCart: (productId) => {
+      return set((state) => ({ cart: state.cart.filter((item) => item.idDrink != productId) }))
+    },
   }), {
   name: 'cart', // unique name
   //getStorage: () => sessionStorage, // (optional) by default, 'localStorage' is used

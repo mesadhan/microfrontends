@@ -8,7 +8,7 @@ import useCartStore from 'common/useCartStore';
 
 export default function HomeFilter() {
 
-    const {count, toggleCartPanel, addToCartIfNotInCart} = useCartStore();
+    const {cart, toggleCartPanel, addToCartIfNotInCart} = useCartStore();
     const { products, getFilteredList } = useProductStore();
 
     const [formData, setFormData] = useState({

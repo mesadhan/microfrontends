@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
 
 
-import useViewingStatisticsStore from "../stores/useViewingStatisticsStore";
+import useViewingStatisticsStore from "../../stores/useViewingStatisticsStore";
 
-import '../index.scss';
+import './index.scss';
+
+
 import { Link } from "react-router-dom";
 
 
@@ -14,6 +16,7 @@ const ViewingStatistics = () => {
         const parsedDate = new Date(date);
         return parsedDate.toLocaleDateString();
     }
+    
 
     // return <div class="min-w-screen min-h-screen bg-gray-100 flex items-center justify-center bg-gray-100 font-sans py-6">
     return <div className="min-w-screen flex justify-center font-sans py-6">

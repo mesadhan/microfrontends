@@ -3,16 +3,11 @@ import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import useCartStore from "common/useCartStore";
-
+import { Link } from "react-router-dom";
 
 export default function CartSidePanel() {
   
-    const {cart,  isShowCartPanel, toggleCartPanel  } = useCartStore();
-    
-
-    // useEffect(() => {
-    //   console.log('cart: ', cart)
-    // }, [cart])
+    const {cart,  isShowCartPanel, toggleCartPanel, removeFromCart  } = useCartStore();
 
   
     return (
@@ -80,18 +75,14 @@ export default function CartSidePanel() {
                                       </h3>
                                       <p className="ml-4">{product.strDrink}</p>
                                     </div>
-                                    <p className="mt-1 text-sm text-gray-500">{product.idDrink}</p>
+                                    {/* <p className="mt-1 text-sm text-gray-500">{product.idDrink}</p> */}
                                   </div>
                                   <div className="flex flex-1 items-end justify-between text-sm">
                                     <p className="text-gray-500">Qty {product.quantity}</p>
 
                                     <div className="flex">
-                                      <button
-                                        type="button"
-                                        className="font-medium text-indigo-600 hover:text-indigo-500"
-                                      >
-                                        Remove
-                                      </button>
+                                      <button onClick={() => removeFromCart(product.idDrink)} 
+                                      type="button" className="font-medium text-indigo-600 hover:text-indigo-500"> Remove </button>
                                     </div>
                                   </div>
                                 </div>
@@ -103,24 +94,18 @@ export default function CartSidePanel() {
                     </div>
 
                     <div className="border-t border-gray-200 py-6 px-4 sm:px-6">
-                      <div className="flex justify-between text-base font-medium text-gray-900">
-                        <p>Subtotal</p>
-                        <p>$00.00</p>
-                      </div>
                       <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                       <div className="mt-6">
-                        <a
-                          href="#"
-                          className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-                        >
-                          Checkout {isShowCartPanel? 'true' : 'false'}
-                        </a>
+                        <button onClick={() => toggleCartPanel(false)} 
+                          className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
+                          Checkout
+                        </button>
                       </div>
                       <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                         <p>
                           or
                           <button
-                            type="button"
+                            type="button" onClick={() => toggleCartPanel(false)}
                             className="font-medium text-indigo-600 hover:text-indigo-500">
                             Continue Shopping
                             <span aria-hidden="true"> &rarr;</span>
