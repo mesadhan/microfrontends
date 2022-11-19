@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 import useProductStore from "common/useProductStore";
 
 
-export default function Details() {
+export default function DetailsPage() {
 
   let { id } = useParams();
   const { productDetailById, productDetails } = useProductStore();
@@ -48,10 +48,10 @@ export default function Details() {
               <li className="list-group-item d-flex justify-content-between align-items-center"> <span className="badge bg-primary rounded-pill">strInstructionsDE</span> {product.strInstructionsDE} </li>
               <li className="list-group-item d-flex justify-content-between align-items-center"> <span className="badge bg-primary rounded-pill">strInstructionsFR</span> {product.strInstructionsFR} </li>
               <li className="list-group-item d-flex justify-content-between align-items-center"> <span className="badge bg-primary rounded-pill">strInstructionsIT</span> {product.strInstructionsIT} </li>
-              
+
               {/* <li className="list-group-item d-flex justify-content-between align-items-center"> <span className="badge bg-primary rounded-pill">strInstructionsZH-HANS</span> {product.strInstructionsZH-HANS} </li>
               <li className="list-group-item d-flex justify-content-between align-items-center"> <span className="badge bg-primary rounded-pill">strInstructionsZH-HANT</span> {product.strInstructionsZH-HANT} </li> */}
-              
+
               <li className="list-group-item d-flex justify-content-between align-items-center"> <span className="badge bg-primary rounded-pill">strDrinkThumb</span> {product.strDrinkThumb} </li>
               <li className="list-group-item d-flex justify-content-between align-items-center"> <span className="badge bg-primary rounded-pill">strIngredient1</span> {product.strIngredient1} </li>
               <li className="list-group-item d-flex justify-content-between align-items-center"> <span className="badge bg-primary rounded-pill">strIngredient2</span> {product.strIngredient2} </li>

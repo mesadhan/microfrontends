@@ -2,9 +2,8 @@ import React, {useEffect, useState} from "react";
 
 import useProductStore from 'common/useProductStore';
 import useCartStore from 'common/useCartStore';
-import Product from "./Product";
 
-export default function HomeFilter() {
+export default function SearchFilter() {
 
   const {
     cart,
@@ -13,7 +12,7 @@ export default function HomeFilter() {
     setCartPanelVisibility
   } = useCartStore();
 
-  const {products, getFilteredList} = useProductStore();
+  const {getFilteredList} = useProductStore();
 
   const [formData, setFormData] = useState({
     category: '',
@@ -64,7 +63,6 @@ export default function HomeFilter() {
       [e.target.name]: e.target.value
     })
 
-    debugger;
     getFilteredList(e.target.name, e.target.value, query)
   }
 
@@ -76,11 +74,7 @@ export default function HomeFilter() {
   }
 
   return (
-
-      <>
-
-
-        <div className="container" style={{'marginTop': '40px'}}>
+      <div className="container" style={{'marginTop': '40px'}}>
           <div className="row">
             <div className="col">
               <label>Select Ingredients </label><br/>
@@ -129,12 +123,5 @@ export default function HomeFilter() {
 
           </div>
         </div>
-
-
-        <Product/>
-
-
-      </>
-
   )
 }
