@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import useViewingStatisticsStore from "../stores/useViewingStatisticsStore";
 
 
-const Home = () => {
+const HomePage = () => {
 
     const {userId, createUserIdentity} = useViewingStatisticsStore();
 
@@ -24,4 +24,4 @@ const Home = () => {
     </div>)
 }
 
-export default Home;
+export default HomePage;

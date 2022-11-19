@@ -11,11 +11,11 @@ import {
 
 import "./index.scss";
 
-import StatisticsProvider from "./StatisticsProvider";
-import Home from "./pages/Home";
+import StatisticsProvider from "./utils/StatisticsProvider";
+import HomePage from "./pages/HomePage";
 import Layout from "./Layout";
-import ViewingStatistics from "./pages/ViewingStatistics";
-import NoPage from "./NoPage";
+import ViewingStatistics from "./pages/ViewingStatisticsPage";
+import NoPage from "./pages/NoPage";
 
 
 const App = () => {
@@ -28,7 +28,7 @@ const App = () => {
         <StatisticsProvider>
           <Routes>
             <Route path="/" element={<Layout />}>
-              <Route index element={<Home />} />
+              <Route index element={<HomePage />} />
               <Route exact path="/statistics" element={<ViewingStatistics />} />
             </Route>
             

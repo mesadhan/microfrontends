@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import { Outlet, Link } from "react-router-dom";
-import Footer from "./Footer";
-import Header from "./Header";
+import Footer from "./pages/Footer";
+import Header from "./pages/Header";
 
 const Layout = () => {
     

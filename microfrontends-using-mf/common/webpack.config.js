@@ -64,14 +64,15 @@ module.exports = {
         common: `common@${process.env.common_public_url}/remoteEntry.js`,
       },
       exposes: {
-        "./useStore": "./src/useStore",
-        "./Header": "./src/Header",
-        "./Footer": "./src/Footer",
-        "./NoPage": "./src/NoPage",
-        "./StatisticsProvider": "./src/StatisticsProvider",
-        "./ViewingStatistics": "./src/pages/ViewingStatistics",
+        "./Header": "./src/pages/Header",
+        "./Footer": "./src/pages/Footer",
+        "./NoPage": "./src/pages/NoPage",
+
         "./useProductStore": "./src/stores/useProductStore",
         "./useCartStore": "./src/stores/useCartStore",
+
+        "./ViewingStatisticsPage": "./src/pages/ViewingStatisticsPage",
+        "./StatisticsProvider": "./src/utils/StatisticsProvider",
       },
       shared: {
         ...deps,

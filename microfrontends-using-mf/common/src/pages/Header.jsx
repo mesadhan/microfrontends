@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import useCartStore from "./stores/useCartStore";
+import useCartStore from "../stores/useCartStore";
 
 export default () => {
   
@@ -14,7 +14,7 @@ export default () => {
 
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
           <div className="container-fluid">
-            <Link to="/" className="navbar-brand" href="">
+            <Link to="/" className="navbar-brand" href="src/pages/Header">
               <img style={{'height': '35px'}} src="https://thecocktaildb.com/images/cocktail_left.png" alt="logo"></img> 
               Cocktail Shop
             </Link>

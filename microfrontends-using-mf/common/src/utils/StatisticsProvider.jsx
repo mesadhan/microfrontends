@@ -4,7 +4,7 @@ import {
   } from "react-router-dom";
 
 
-import useViewingStatisticsStore from "./stores/useViewingStatisticsStore";
+import useViewingStatisticsStore from "../stores/useViewingStatisticsStore";
 
 export default function StatisticsProvider({ children }) {
  
