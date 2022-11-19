@@ -32,6 +32,11 @@ export default function SearchFilter() {
       await fetchGlasses()
 
       getFilteredList('category', 'Cocktail', '');
+      setFormData({
+        category: 'Cocktail',
+        glass: '',
+        ingredient: ''
+      })
     })()
   }, [])
 
@@ -77,18 +82,6 @@ export default function SearchFilter() {
       <div className="container" style={{'marginTop': '40px'}}>
           <div className="row">
             <div className="col">
-              <label>Select Ingredients </label><br/>
-              <select className="form-control" id="grid-ingredient"
-                      onChange={onInputChange} name="ingredient"
-                      value={formData.ingredient}>
-                <option value=""></option>
-                {ingredients?.map((ingredient, index) => {
-                  return <option key={index}
-                                 value={ingredient.strIngredient1}>{ingredient.strIngredient1}</option>
-                })}
-              </select>
-            </div>
-            <div className="col">
               <label>Select Category </label><br/>
               <select className="form-control" id="grid-category"
                       onChange={onInputChange} name="category"
@@ -102,8 +95,20 @@ export default function SearchFilter() {
               </select>
             </div>
             <div className="col">
-              <label>Select Glass </label>
-              <label>Select Glasses </label><br/>
+              <label>Select Ingredients </label><br/>
+              <select className="form-control" id="grid-ingredient"
+                      onChange={onInputChange} name="ingredient"
+                      value={formData.ingredient}>
+                <option value=""></option>
+                {ingredients?.map((ingredient, index) => {
+                  return <option key={index}
+                                 value={ingredient.strIngredient1}>{ingredient.strIngredient1}</option>
+                })}
+              </select>
+            </div>
+            
+            <div className="col">
+              <label>Select Glass </label><br/>
               <select className="form-control" id="grid-glass"
                       onChange={onInputChange} name="glass"
                       value={formData.glass}>
