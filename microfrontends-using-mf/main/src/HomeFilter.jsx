@@ -27,6 +27,8 @@ export default function HomeFilter() {
             await fetchCategories()
             await fetchIngredients()
             await fetchGlasses()
+
+            getFilteredList('category', 'Cocktail', '');
         })()
     }, [])
 
@@ -58,7 +60,8 @@ export default function HomeFilter() {
             [e.target.name]: e.target.value
         })
 
-
+        
+        debugger;
         getFilteredList(e.target.name, e.target.value, query)
     }
 
