@@ -16,45 +16,39 @@ const ViewingStatistics = () => {
         const parsedDate = new Date(date);
         return parsedDate.toLocaleDateString();
     }
-    
+
 
     // return <div class="min-w-screen min-h-screen bg-gray-100 flex items-center justify-center bg-gray-100 font-sans py-6">
-    return <div className="min-w-screen flex justify-center font-sans py-6">
-        <div className="container">
-        
-            <div className="w-full py-3">
-                <div className="inline-block mr-2 mt-2">
-                <Link className="focus:outline-none text-orange-600 text-sm py-2.5 px-5 rounded-md border border-orange-600 hover:bg-yellow-50 items-center mt-100" href="/" to={'/'}>Back Home</Link>               
-                </div>
-            </div>
-        
-            <table className="min-w-full border-collapse block md:table">
-            <thead className="block md:table-header-group">
-                <tr className="border border-grey-500 md:border-none block md:table-row absolute -top-full md:top-auto -left-full md:left-auto  md:relative ">
-                    <th className="bg-orange-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Page</th>
-                    <th className="bg-orange-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Visits</th>
-                    <th className="bg-orange-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">First visited</th>
-                    <th className="bg-orange-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Last visited</th>
-                </tr>
-            </thead>
-            <tbody className="block md:table-row-group">
-                
-                {visitedPagesStatistics.map((page, index) => (
+    return <div className="container-fluid">
 
-                    <tr key={index} className="border border-orange-500 md:border-none block md:table-row">
-                        <td className="p-2 md:border md:border-orange-500 text-left block md:table-cell"><span className="inline-block w-1/3">{page.url} </span></td>
-                        <td className="p-2 md:border md:border-orange-500 text-left block md:table-cell"><span className="inline-block w-1/3">{page.counter} </span></td>
-                        <td className="p-2 md:border md:border-orange-500 text-left block md:table-cell"><span className="inline-block w-1/3">{parseDate(page.created_at)} </span></td>
-                        <td className="p-2 md:border md:border-orange-500 text-left block md:table-cell"><span className="inline-block w-1/3">{parseDate(page.updated_at)} </span></td>
+            <Link className="" href="/" to={'/'}>Back Home</Link>
+
+            <table className="table table-bordered">
+                <thead>
+                    <tr>
+                        <th className="">Page</th>
+                        <th className="">Visits</th>
+                        <th className="">First visited</th>
+                        <th className="">Last visited</th>
                     </tr>
+                </thead>
+                <tbody className="">
 
-                ))}
-            </tbody>
-	</table>
+                    {visitedPagesStatistics.map((page, index) => (
 
-  
-    
-        </div>
+                        <tr key={index} className="">
+                            <td className=""><span className="">{page.url} </span></td>
+                            <td className=""><span className="">{page.counter} </span></td>
+                            <td className=""><span className="">{parseDate(page.created_at)} </span></td>
+                            <td className=""><span className="">{parseDate(page.updated_at)} </span></td>
+                        </tr>
+
+                    ))}
+                </tbody>
+            </table>
+
+
+
     </div>
 };
 

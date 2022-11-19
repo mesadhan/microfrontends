@@ -6,6 +6,7 @@ const useCartStore = create(persist(
     cart: [],
     isShowCartPanel: true,
     toggleCartPanel: () => set((state) => ({ isShowCartPanel: !state.isShowCartPanel })),
+    setCartPanelVisibility: (value) => set((state) => ({ isShowCartPanel: value })),
     addToCartIfNotInCart: (product) => {
       set((state) => {
 
@@ -21,7 +22,7 @@ const useCartStore = create(persist(
           cart[index]['quantity'] = cart[index]['quantity'] + 1;
         }
 
-        return { cart };
+        return { cart , isShowCartPanel: true };
       });
     },
     removeFromCart: (productId) => {

@@ -1,0 +1,53 @@
+$card-size: 300px;
+
+.menusComponent{
+margin-top: 30px;
+}
+
+.bg-dark{
+  background: #f97316!important;
+}
+
+
+.cart-panel{
+  position: fixed;
+  top: 70px;
+  width: 400px;
+  right: 0;
+  height:90vh;
+  background: #fff!important;
+  box-shadow: 0 0 7px rgba(0,0,0,.34);
+  overflow-y: scroll;
+}
+
+.flex-container-row {
+  //min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-container .flex-item {
+  background-color: #f1f1f1;
+  min-width: $card-size;
+  max-width: $card-size;
+  margin: 15px;
+}
+
+
+.card-border{
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+}
+
+.card-box {
+  overflow-wrap: break-word;
+  box-shadow: 0 0 2px rgba(0,0,0,.34);
+}
