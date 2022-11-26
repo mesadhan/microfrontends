@@ -1,0 +1,1 @@
+Due to time shortage single-spa implemented is not completed, but I tried to cover the architecture and design of micro frontends using module federation
