@@ -36,4 +36,13 @@ Single spa is the best way, without knowing internal details because they have s
 Check details in the README.md file of each project.
 
 
+
+## Run microfrontends-using-mf
+
+```
+cd microfrontends-using-mf/common && yarn install && yarn start
+cd microfrontends-using-mf/main && yarn install && yarn start
+```
+
+
 # Thank You!
