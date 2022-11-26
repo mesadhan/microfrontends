@@ -10,7 +10,7 @@ cd main && yarn install && yarn start
 
 ## Architecture
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nmzqxzniw46ou7988jfh.png)
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jdonne7i84ild8m1i8qf.png)
 
  # Demonstration
 

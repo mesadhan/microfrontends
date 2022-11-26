@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="Ku3m-uqi4QEZaM89bhah" name="mf">
-        <mxGraphModel dx="160" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1054" dy="572" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -31,8 +31,8 @@
                 <mxCell id="3" value="Components" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="64" y="310" width="117" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="7" value="Commond MFA" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="510" y="180" width="107" height="30" as="geometry"/>
+                <mxCell id="7" value="Common MFA Application" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="180" width="180" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="16" value="Cart Panel" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="261" y="260" width="117" height="30" as="geometry"/>
@@ -46,8 +46,8 @@
                 <mxCell id="23" value="Store" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="44" y="550" width="337" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="24" value="Main MFA" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="44" y="190" width="107" height="30" as="geometry"/>
+                <mxCell id="24" value="Main MFA Application&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="44" y="190" width="166" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="25" value="Components" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="700" y="255" width="117" height="60" as="geometry"/>
