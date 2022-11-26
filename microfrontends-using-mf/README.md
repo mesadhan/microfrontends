@@ -7,6 +7,11 @@ cd common && yarn install && yarn start
 cd main && yarn install && yarn start
 ```
 
+
+## Architecture
+
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nmzqxzniw46ou7988jfh.png)
+
  # Demonstration
 
 In this demonstration we have to micro-frontend apps, one is `common` another one is `main`. Common app is a shared library that contains common components and `main app` is a main application that uses common components. 
