@@ -59,5 +59,18 @@ We have a common provider using that we can keep track of the users viewing stat
 
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uluj9wm31iku7ep9ak7v.png)
 
+## Caching
+
+Initially, we have to fetch all the products from the API and store it in the store. So that we can use it later and page load time will be faster.
+
+
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1cf40noecqz3h5knymyf.png)
+
+Storing users cart and viewing statistics in the store so that we can use it later.
+
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ae2emb5ggh1gyih3navk.png)
+
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/o9p75iw659jyjx1s8k6u.png)
+
 
 `Note:` This is a simple demonstration of a micro-frontend application. We can use this architectural style to build a complex application. It is a good way to maintain the codebase and make it more flexible. Need teamwork to make it more flexible and production ready. We could do a bunch of improvements like could use typescript, a common CSS bundle, and publishing to packages repo or CDN to share common components, additionally, we could manage components versioning as well.

@@ -39,7 +39,7 @@ Check details in the README.md file of each project.
 
 ## Run microfrontends-using-mf
 
-```
+```bash
 cd microfrontends-using-mf/common && yarn install && yarn start
 cd microfrontends-using-mf/main && yarn install && yarn start
 ```
